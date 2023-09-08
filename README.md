@@ -1,66 +1,14 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laravel Scraper Globo - Classificação do Brasileirão
+Este é um scraper sem fins lucrativos que visa exemplificar uma forma de obter a tabela de classificação do campeonato brasileiro de futebol, utilizando para isso um script com caracteristicas de Scraper/Crawler/Web-Crawler que irá simular a visita de um usuário comum ao site da Globo responsável pela tabela do brasileiração e então gerar ou interceptar um JSON com as informações.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Disclaimer
+Este é um projeto didático e sem fins lucrativos. Antes de usar soluções como está é importante ter conhecimento dos terminos de uso do site que será consumido e além disso é importante que mesmo em ambiente de estudo seja feito um uso consciente das requisições. 
 
-## About Laravel
+## Enpoints Disponíveis
+- GET :: http://localhost/api/globo/brasileirao/serie-a
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Exemplo de Resposta
+- Exemplo de resposta obtida utilizando o scraper
+```json
+[{"aproveitamento":77,"derrotas":3,"empates":3,"equipe_id":263,"escudo":"https:\/\/s.sde.globo.com\/media\/organizations\/2019\/02\/04\/botafogo-svg.svg","faixa_classificacao":{"cor":"#0000ff"},"faixa_classificacao_cor":"#0000ff","gols_contra":13,"gols_pro":39,"jogos":22,"nome_popular":"Botafogo","ordem":1,"pontos":51,"saldo_gols":26,"sigla":"BOT","ultimos_jogos":["e","v","e","v","d"],"variacao":0,"vitorias":16},{"aproveitamento":62,"derrotas":3,"empates":8,"equipe_id":275,"escudo":"https:\/\/s.sde.globo.com\/media\/organizations\/2019\/07\/06\/Palmeiras.svg","faixa_classificacao":{"cor":"#0000ff"},"faixa_classificacao_cor":"#0000ff","gols_contra":17,"gols_pro":37,"jogos":22,"nome_popular":"Palmeiras","ordem":2,"pontos":41,"saldo_gols":20,"sigla":"PAL","ultimos_jogos":["d","v","v","v","e"],"variacao":0,"vitorias":11},{"aproveitamento":61,"derrotas":6,"empates":3,"equipe_id":284,"escudo":"https:\/\/s.sde.globo.com\/media\/organizations\/2018\/03\/12\/gremio.svg","faixa_classificacao":{"cor":"#0000ff"},"faixa_classificacao_cor":"#0000ff","gols_contra":25,"gols_pro":34,"jogos":21,"nome_popular":"Gr\u00eamio","ordem":3,"pontos":39,"saldo_gols":9,"sigla":"GRE","ultimos_jogos":["d","v","d","v","v"],"variacao":0,"vitorias":12},{"aproveitamento":59,"derrotas":5,"empates":6,"equipe_id":262,"escudo":"https:\/\/s.sde.globo.com\/media\/organizations\/2018\/04\/10\/Flamengo-2018.svg","faixa_classificacao":{"cor":"#0000ff"},"faixa_classificacao_cor":"#0000ff","gols_contra":27,"gols_pro":36,"jogos":22,"nome_popular":"Flamengo","ordem":4,"pontos":39,"saldo_gols":9,"sigla":"FLA","ultimos_jogos":["d","e","v","e","v"],"variacao":0,"vitorias":11},{"aproveitamento":57,"derrotas":6,"empates":5,"equipe_id":266,"escudo":"https:\/\/s.sde.globo.com\/media\/organizations\/2018\/03\/11\/fluminense.svg","faixa_classificacao":{"cor":"#00ffff"},"faixa_classificacao_cor":"#00ffff","gols_contra":22,"gols_pro":31,"jogos":22,"nome_popular":"Fluminense","ordem":5,"pontos":38,"saldo_gols":9,"sigla":"FLU","ultimos_jogos":["v","d","v","e","v"],"variacao":0,"vitorias":11},{"aproveitamento":54,"derrotas":4,"empates":9,"equipe_id":280,"escudo":"https:\/\/s.sde.globo.com\/media\/organizations\/2021\/06\/28\/bragantino.svg","faixa_classificacao":{"cor":"#00ffff"},"faixa_classificacao_cor":"#00ffff","gols_contra":21,"gols_pro":29,"jogos":22,"nome_popular":"Bragantino","ordem":6,"pontos":36,"saldo_gols":8,"sigla":"RBB","ultimos_jogos":["v","e","d","v","e"],"variacao":0,"vitorias":9},{"aproveitamento":51,"derrotas":6,"empates":7,"equipe_id":293,"escudo":"https:\/\/s.sde.globo.com\/media\/organizations\/2019\/09\/09\/Athletico-PR.svg","faixa_classificacao":{"cor":"#008000"},"faixa_classificacao_cor":"#008000","gols_contra":26,"gols_pro":32,"jogos":22,"nome_popular":"Athletico-PR","ordem":7,"pontos":34,"saldo_gols":6,"sigla":"CAP","ultimos_jogos":["e","v","e","e","e"],"variacao":0,"vitorias":9},{"aproveitamento":48,"derrotas":8,"empates":5,"equipe_id":356,"escudo":"https:\/\/s.sde.globo.com\/media\/organizations\/2021\/09\/19\/Fortaleza_2021_1.svg","faixa_classificacao":{"cor":"#008000"},"faixa_classificacao_cor":"#008000","gols_contra":21,"gols_pro":25,"jogos":22,"nome_popular":"Fortaleza","ordem":8,"pontos":32,"saldo_gols":4,"sigla":"FOR","ultimos_jogos":["d","v","v","v","d"],"variacao":0,"vitorias":9},{"aproveitamento":46,"derrotas":7,"empates":7,"equipe_id":282,"escudo":"https:\/\/s.sde.globo.com\/media\/organizations\/2018\/03\/10\/atletico-mg.svg","faixa_classificacao":{"cor":"#008000"},"faixa_classificacao_cor":"#008000","gols_contra":19,"gols_pro":25,"jogos":22,"nome_popular":"Atl\u00e9tico-MG","ordem":9,"pontos":31,"saldo_gols":6,"sigla":"CAM","ultimos_jogos":["v","v","d","v","e"],"variacao":0,"vitorias":8},{"aproveitamento":42,"derrotas":10,"empates":4,"equipe_id":1371,"escudo":"https:\/\/s.sde.globo.com\/media\/organizations\/2018\/12\/26\/Cuiaba_EC.svg","faixa_classificacao":{"cor":"#008000"},"faixa_classificacao_cor":"#008000","gols_contra":27,"gols_pro":21,"jogos":22,"nome_popular":"Cuiab\u00e1","ordem":10,"pontos":28,"saldo_gols":-6,"sigla":"CUI","ultimos_jogos":["v","d","d","d","d"],"variacao":0,"vitorias":8},{"aproveitamento":44,"derrotas":7,"empates":7,"equipe_id":276,"escudo":"https:\/\/s.sde.globo.com\/media\/organizations\/2018\/03\/11\/sao-paulo.svg","faixa_classificacao":{"cor":"#008000"},"faixa_classificacao_cor":"#008000","gols_contra":21,"gols_pro":25,"jogos":21,"nome_popular":"S\u00e3o Paulo","ordem":11,"pontos":28,"saldo_gols":4,"sigla":"SAO","ultimos_jogos":["e","d","e","e","d"],"variacao":0,"vitorias":7},{"aproveitamento":39,"derrotas":8,"empates":8,"equipe_id":283,"escudo":"https:\/\/s.sde.globo.com\/media\/organizations\/2021\/02\/13\/cruzeiro_2021.svg","faixa_classificacao":{"cor":"#008000"},"faixa_classificacao_cor":"#008000","gols_contra":20,"gols_pro":20,"jogos":22,"nome_popular":"Cruzeiro","ordem":12,"pontos":26,"saldo_gols":0,"sigla":"CRU","ultimos_jogos":["e","d","e","d","e"],"variacao":0,"vitorias":6},{"aproveitamento":41,"derrotas":7,"empates":8,"equipe_id":264,"escudo":"https:\/\/s.sde.globo.com\/media\/organizations\/2019\/09\/30\/Corinthians.svg","faixa_classificacao":{"cor":null},"faixa_classificacao_cor":null,"gols_contra":23,"gols_pro":22,"jogos":21,"nome_popular":"Corinthians","ordem":13,"pontos":26,"saldo_gols":-1,"sigla":"COR","ultimos_jogos":["e","v","e","e","e"],"variacao":0,"vitorias":6},{"aproveitamento":39,"derrotas":8,"empates":8,"equipe_id":285,"escudo":"https:\/\/s.sde.globo.com\/media\/organizations\/2018\/03\/11\/internacional.svg","faixa_classificacao":{"cor":null},"faixa_classificacao_cor":null,"gols_contra":24,"gols_pro":17,"jogos":22,"nome_popular":"Internacional","ordem":14,"pontos":26,"saldo_gols":-7,"sigla":"INT","ultimos_jogos":["e","d","d","e","e"],"variacao":0,"vitorias":6},{"aproveitamento":37,"derrotas":9,"empates":7,"equipe_id":290,"escudo":"https:\/\/s.sde.globo.com\/media\/organizations\/2021\/03\/01\/GOIAS-2021.svg","faixa_classificacao":{"cor":null},"faixa_classificacao_cor":null,"gols_contra":29,"gols_pro":20,"jogos":22,"nome_popular":"Goi\u00e1s","ordem":15,"pontos":25,"saldo_gols":-9,"sigla":"GOI","ultimos_jogos":["v","v","e","e","e"],"variacao":0,"vitorias":6},{"aproveitamento":33,"derrotas":10,"empates":7,"equipe_id":265,"escudo":"https:\/\/s.sde.globo.com\/media\/organizations\/2018\/03\/11\/bahia.svg","faixa_classificacao":{"cor":null},"faixa_classificacao_cor":null,"gols_contra":29,"gols_pro":23,"jogos":22,"nome_popular":"Bahia","ordem":16,"pontos":22,"saldo_gols":-6,"sigla":"BAH","ultimos_jogos":["v","d","v","d","e"],"variacao":0,"vitorias":5},{"aproveitamento":31,"derrotas":11,"empates":6,"equipe_id":277,"escudo":"https:\/\/s.sde.globo.com\/media\/organizations\/2018\/03\/12\/santos.svg","faixa_classificacao":{"cor":"#ff0000"},"faixa_classificacao_cor":"#ff0000","gols_contra":36,"gols_pro":21,"jogos":22,"nome_popular":"Santos","ordem":17,"pontos":21,"saldo_gols":-15,"sigla":"SAN","ultimos_jogos":["e","d","v","d","d"],"variacao":0,"vitorias":5},{"aproveitamento":26,"derrotas":12,"empates":5,"equipe_id":267,"escudo":"https:\/\/s.sde.globo.com\/media\/organizations\/2021\/09\/04\/vasco_SVG.svg","faixa_classificacao":{"cor":"#ff0000"},"faixa_classificacao_cor":"#ff0000","gols_contra":31,"gols_pro":16,"jogos":21,"nome_popular":"Vasco","ordem":18,"pontos":17,"saldo_gols":-15,"sigla":"VAS","ultimos_jogos":["v","e","v","d","e"],"variacao":0,"vitorias":4},{"aproveitamento":25,"derrotas":13,"empates":4,"equipe_id":327,"escudo":"https:\/\/s.sde.globo.com\/media\/organizations\/2019\/02\/28\/America-MG-VERDE-fev2019-01.svg","faixa_classificacao":{"cor":"#ff0000"},"faixa_classificacao_cor":"#ff0000","gols_contra":45,"gols_pro":24,"jogos":21,"nome_popular":"Am\u00e9rica-MG","ordem":19,"pontos":16,"saldo_gols":-21,"sigla":"AME","ultimos_jogos":["d","d","d","v","v"],"variacao":1,"vitorias":4},{"aproveitamento":22,"derrotas":13,"empates":5,"equipe_id":294,"escudo":"https:\/\/s.sde.globo.com\/media\/organizations\/2018\/03\/11\/coritiba.svg","faixa_classificacao":{"cor":"#ff0000"},"faixa_classificacao_cor":"#ff0000","gols_contra":42,"gols_pro":21,"jogos":21,"nome_popular":"Coritiba","ordem":20,"pontos":14,"saldo_gols":-21,"sigla":"CFC","ultimos_jogos":["d","d","d","d","d"],"variacao":-1,"vitorias":3}]
+```
